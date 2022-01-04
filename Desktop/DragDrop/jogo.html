@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Lobster&display=swap" rel="stylesheet">
+
+    <title>Onírica</title>
+
+    <link rel='stylesheet'href='styles.css'>
+    <script src='main.js' defer></script>
+    <script src="https://kit.fontawesome.com/f878123f69.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div id="esquerda">
+        <div id="imagem">
+            <img src="jogo.png" height="500px" justify-content=center>
+        </div>
+    </div>
+
+    <div id="direita">
+        <div class="titulo">
+            Ferramentas:
+        </div>
+        <div class="texto">
+            Arraste os botões abaixo para a área "caminho"
+        </div>
+        <section class="draggable-elements">
+            <i class="fas fa-arrow-circle-down draggable" draggable="true" style="color: #ff6384;" id="arrow-circle-down"></i>
+            <i class="fas fa-arrow-circle-left draggable" draggable="true" style="color: #ffce56;" id="arrow-circle-left"></i>
+            <i class="fas fa-arrow-circle-right draggable" draggable="true" style="color:deepskyblue;" id="arrow-circle-right"></i>  
+            <i class="fas fa-arrow-circle-up draggable" draggable="true" style="color:darkseagreen;" id="arrow-circle-up"></i>       
+            <!-- <i class="fas fa-horse draggable" draggable="true" style="color: #333333;" id="horse"></i>
+            <i class="fas fa-hippo draggable" draggable="true" style="color: #ff9f40;" id="hippo"></i>
+            <i class="fas fa-spider draggable" draggable="true" style="color: #ff99cc;" id="spider"></i> -->
+        </section>
+        
+        <div class="titulo">
+            Caminho:
+        </div>
+        <section class="droppable-elements">
+            
+            <div class="droppable" data-draggable-id="arrow-circle-up"><span>1</span></div>
+            <div class="droppable" data-draggable-id="arrow-circle-up"><span>2</span></div>
+            <div class="droppable" data-draggable-id="arrow-circle-right"><span>3</span></div>
+            <div class="droppable" data-draggable-id="arrow-circle-up"><span>4</span></div>
+            <div class="droppable" data-draggable-id="arrow-circle-right"><span>5</span></div>
+            <div class="droppable" data-draggable-id="arrow-circle-up"><span>6</span></div>
+            <div class="droppable" data-draggable-id="arrow-circle-up"><span>7</span></div>
+
+            <!-- <div class="droppable" data-draggable-id="spider"><span>Spider</span></div>
+            <div class="droppable" data-draggable-id="horse"><span>Horse</span></div>
+            <div class="droppable" data-draggable-id="hippo"><span>Hippo</span></div> -->
+        </section>
+        <div class="botao">
+        <a href="#" onclick=" if (controle === 7) {
+        window.location = 'validacao.html';
+        
+        }
+        else {
+        alert('Favor preencher todos os campos para continuar');
+        }">
+        <button class = "botao_validar fas fa-check" style="color:aliceblue;" type="button"></button>
+        </a>
+    </div>
+        
+    </div>
+
+    
+</body>
+</html>

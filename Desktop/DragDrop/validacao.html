@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Lobster&display=swap" rel="stylesheet">
+
+    <title>Parabéns!</title>
+
+    <link rel='stylesheet'href='styles.css'>
+    <script src='main.js' defer></script>
+    <script src="https://kit.fontawesome.com/f878123f69.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+        <div id="loader"></div>
+        
+        <div style="display:none;" id="myDiv" class="animate-bottom">
+            <div class="titulo">
+                Parabéns!
+            </div>
+            <div class="texto">
+                Você concluiu corretamente a rota para que a gatinha Ada encontrasse seu foguete!
+            </div>
+            
+              <img src="caminho.gif" height="500px" justify-content=center>
+          
+        </div>
+        
+        <script>
+        var myVar;
+        
+        function myFunction() {
+          myVar = setTimeout(showPage, 3000);
+        }
+        
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("myDiv").style.display = "block";
+        }
+        </script>
+    
+
+</body>
+</html>

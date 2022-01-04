@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background-image: url(/Users/julianaando/Desktop/DragDrop/bg.jpeg); */
+  background-color:indigo;
+  font-family: 'Montserrat', sans-serif;
+  color: #111;
+  width: 1100px; 
+  margin-left: auto;
+  margin-right: auto; 
+  padding-top: 30px;
+  justify-content: center;
+  
+
+}
+
+#esquerda{
+  float: left;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto; 
+  text-align: center;
+  justify-content: center;
+}
+
+#direita{
+  float: left;
+  width: 500px;
+}
+
+.titulo {
+  font-size: 50px;
+  color: aliceblue;
+  font-family: 'Lobster', cursive;
+  
+  
+}
+
+.texto {
+  font-size: 18px;
+  color: aliceblue;
+  font-family: 'Assistant', sans-serif;
+  font-weight: 100;
+  padding-top: 10px;
+}
+
+.botao_validar{
+  background-color:mediumpurple;
+	border-radius:100px;
+	border:1px solid;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:25px;
+	padding:16px 31px;
+	text-decoration:none;
+	color: black;
+  height: 80px;
+  width: 80px;
+  
+}
+.botao{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.botao_missao{
+  background-color:mediumpurple;
+	border-radius:20px;
+	border:1px solid;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	text-decoration:none;
+	color: rgb(255, 255, 255);
+  height: 60px;
+  width: 150px;
+  
+}
+
+.draggable-elements {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  
+}
+
+.droppable-elements {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.draggable {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0rem 0.5rem;
+  cursor: move;
+  transition: opacity 0.2s;
+}
+.draggable:hover {
+  opacity: 0.5;
+}
+.droppable {
+  height: 4rem;
+  width: 4rem;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius:20px;
+
+  transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+}
+.droppable span {
+  font-size: 1.25rem;
+  pointer-events: none; /* The element is never the target of pointer events */
+}
+
+/* Drag and Drop Related Styling */
+
+.droppable.droppable-hover {
+  /* background-color: #bee3f0; */
+  border-width: 5px;
+  transform: scale(1.1);
+}
+.droppable.dropped {
+  border-style: solid;
+  color: #fff;
+}
+.droppable.dropped span {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+.droppable.dropped i {
+  pointer-events: none;
+}
+.draggable.dragged {
+  user-select: none;
+  opacity: 0.1;
+  cursor: default;
+  
+}
+.draggable.dragged:hover {
+  opacity: 0.1;
+}
+
+@media (max-width: 600px) {
+  html { font-size: 14px; }
+  .draggable-elements { margin: 1.5rem; }
+}
+
+
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+  #myDiv {
+    display: none;
+    text-align: center;
+  }
+
